@@ -60,13 +60,13 @@
 
         document.addEventListener("DOMContentLoaded", async () => {
             const components = [
-                { id: "hero-placeholder", file: "_includes/hero.html" },
-                { id: "about-placeholder", file: "_includes/about.html" },
-                { id: "fleet-summary-placeholder", file: "_includes/fleet-summary.html" },
-                { id: "fleet-gallery-placeholder", file: "_includes/fleet-gallery.html" },
-                { id: "safety-placeholder", file: "_includes/safety.html" },
-                { id: "gprs-placeholder", file: "_includes/gprs.html" },
-                { id: "contact-placeholder", file: "_includes/contact.html" }
+                { id: "hero-placeholder", file: "hero.html" },
+                { id: "about-placeholder", file: "about.html" },
+                { id: "fleet-summary-placeholder", file: "fleet-summary.html" },
+                { id: "fleet-gallery-placeholder", file: "fleet-gallery.html" },
+                { id: "safety-placeholder", file: "safety.html" },
+                { id: "gprs-placeholder", file: "gprs.html" },
+                { id: "contact-placeholder", file: "contact.html" }
             ];
 
             await Promise.all(components.map(comp => loadComponent(comp.id, comp.file)));
