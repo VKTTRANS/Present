@@ -1,0 +1,94 @@
+<section id="fleet-summary" class="min-h-screen w-full flex flex-col justify-center items-center bg-[#111827] text-white relative overflow-hidden py-12 md:py-20">
+    
+    <!-- ฉากหลังตกแต่ง (แสง Glow) -->
+    <div class="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-green-500/10 blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-yellow-500/10 blur-3xl translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col items-center justify-center">
+        
+        <!-- หัวข้อหลัก -->
+        <div data-aos="fade-down" data-aos-duration="1000" class="text-center mb-8 md:mb-12">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight">ศักยภาพกองรถของเรา</h2>
+            <div class="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                เรามีรถพร้อมให้บริการมากกว่า <span class="text-green-400 font-black text-5xl px-2">80</span> คัน <br class="hidden md:block">ครอบคลุมทุกความต้องการด้านการขนส่งของธุรกิจคุณ
+            </p>
+        </div>
+
+        <!-- กล่องตารางสรุปจำนวนรถแต่ละประเภท (ไอคอนไม่ซ้ำกันแล้ว) -->
+        <div class="flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto w-full">
+            
+            <!-- 1. รถเทรลเลอร์ (หัวลากใหญ่) -->
+            <div data-aos="zoom-in" data-aos-delay="100" class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 p-4 rounded-2xl w-[46%] sm:w-[30%] md:w-[22%] lg:w-[18%] flex flex-col items-center text-center shadow-lg hover:border-green-500 hover:-translate-y-1 transition-all group">
+                <i class="fa-solid fa-truck-moving text-3xl md:text-4xl text-gray-400 mb-2 group-hover:text-green-400 transition-colors"></i>
+                <h4 class="text-sm font-bold text-gray-200 mb-1 h-10 flex items-center justify-center leading-tight">รถเทรลเลอร์</h4>
+                <div class="text-2xl md:text-3xl font-black text-green-400">50 <span class="text-xs font-normal text-gray-500">คัน</span></div>
+            </div>
+
+            <!-- 2. รถ 12 ล้อพ่วง (มีหางพ่วง) -->
+            <div data-aos="zoom-in" data-aos-delay="200" class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 p-4 rounded-2xl w-[46%] sm:w-[30%] md:w-[22%] lg:w-[18%] flex flex-col items-center text-center shadow-lg hover:border-green-500 hover:-translate-y-1 transition-all group">
+                <i class="fa-solid fa-trailer text-3xl md:text-4xl text-gray-400 mb-2 group-hover:text-green-400 transition-colors"></i>
+                <h4 class="text-sm font-bold text-gray-200 mb-1 h-10 flex items-center justify-center leading-tight">รถ 12 ล้อพ่วง</h4>
+                <div class="text-2xl md:text-3xl font-black text-green-400">10 <span class="text-xs font-normal text-gray-500">คัน</span></div>
+            </div>
+
+            <!-- 3. รถ 12 ล้อพ่วง ดั๊ม (กระบะยกได้) -->
+            <div data-aos="zoom-in" data-aos-delay="300" class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 p-4 rounded-2xl w-[46%] sm:w-[30%] md:w-[22%] lg:w-[18%] flex flex-col items-center text-center shadow-lg hover:border-green-500 hover:-translate-y-1 transition-all group">
+                <i class="fa-solid fa-truck-ramp-box text-3xl md:text-4xl text-gray-400 mb-2 group-hover:text-green-400 transition-colors"></i>
+                <h4 class="text-sm font-bold text-gray-200 mb-1 h-10 flex items-center justify-center leading-tight">รถ 12 ล้อพ่วง ดั๊ม</h4>
+                <div class="text-2xl md:text-3xl font-black text-green-400">20 <span class="text-xs font-normal text-gray-500">คัน</span></div>
+            </div>
+
+            <!-- 4. รถ 10 ล้อพ่วง (รถวิ่งเร็ว) -->
+            <div data-aos="zoom-in" data-aos-delay="400" class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 p-4 rounded-2xl w-[46%] sm:w-[30%] md:w-[22%] lg:w-[18%] flex flex-col items-center text-center shadow-lg hover:border-green-500 hover:-translate-y-1 transition-all group">
+                <i class="fa-solid fa-truck-fast text-3xl md:text-4xl text-gray-400 mb-2 group-hover:text-green-400 transition-colors"></i>
+                <h4 class="text-sm font-bold text-gray-200 mb-1 h-10 flex items-center justify-center leading-tight">รถ 10 ล้อพ่วง</h4>
+                <div class="text-2xl md:text-3xl font-black text-green-400">15 <span class="text-xs font-normal text-gray-500">คัน</span></div>
+            </div>
+
+            <!-- 5. รถ 10 ล้อ (รถบรรทุกมาตรฐาน) -->
+            <div data-aos="zoom-in" data-aos-delay="500" class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 p-4 rounded-2xl w-[46%] sm:w-[30%] md:w-[22%] lg:w-[18%] flex flex-col items-center text-center shadow-lg hover:border-green-500 hover:-translate-y-1 transition-all group">
+                <i class="fa-solid fa-truck text-3xl md:text-4xl text-gray-400 mb-2 group-hover:text-green-400 transition-colors"></i>
+                <h4 class="text-sm font-bold text-gray-200 mb-1 h-10 flex items-center justify-center leading-tight">รถ 10 ล้อ</h4>
+                <div class="text-2xl md:text-3xl font-black text-green-400">10 <span class="text-xs font-normal text-gray-500">คัน</span></div>
+            </div>
+
+            <!-- 6. รถ 6 ล้อพ่วง (รถบรรทุกมีลูกศร) -->
+            <div data-aos="zoom-in" data-aos-delay="600" class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 p-4 rounded-2xl w-[46%] sm:w-[30%] md:w-[22%] lg:w-[18%] flex flex-col items-center text-center shadow-lg hover:border-green-500 hover:-translate-y-1 transition-all group">
+                <i class="fa-solid fa-truck-arrow-right text-3xl md:text-4xl text-gray-400 mb-2 group-hover:text-green-400 transition-colors"></i>
+                <h4 class="text-sm font-bold text-gray-200 mb-1 h-10 flex items-center justify-center leading-tight">รถ 6 ล้อพ่วง</h4>
+                <div class="text-2xl md:text-3xl font-black text-green-400">10 <span class="text-xs font-normal text-gray-500">คัน</span></div>
+            </div>
+
+            <!-- 7. รถ 6 ล้อ (หน้าเต็ม) -->
+            <div data-aos="zoom-in" data-aos-delay="700" class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 p-4 rounded-2xl w-[46%] sm:w-[30%] md:w-[22%] lg:w-[18%] flex flex-col items-center text-center shadow-lg hover:border-green-500 hover:-translate-y-1 transition-all group">
+                <i class="fa-solid fa-truck-front text-3xl md:text-4xl text-gray-400 mb-2 group-hover:text-green-400 transition-colors"></i>
+                <h4 class="text-sm font-bold text-gray-200 mb-1 h-10 flex items-center justify-center leading-tight">รถ 6 ล้อ</h4>
+                <div class="text-2xl md:text-3xl font-black text-green-400">10 <span class="text-xs font-normal text-gray-500">คัน</span></div>
+            </div>
+
+            <!-- 8. รถกระบะตู้ทึบ (ทรงกระบะ) -->
+            <div data-aos="zoom-in" data-aos-delay="800" class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 p-4 rounded-2xl w-[46%] sm:w-[30%] md:w-[22%] lg:w-[18%] flex flex-col items-center text-center shadow-lg hover:border-green-500 hover:-translate-y-1 transition-all group">
+                <i class="fa-solid fa-truck-pickup text-3xl md:text-4xl text-gray-400 mb-2 group-hover:text-green-400 transition-colors"></i>
+                <h4 class="text-sm font-bold text-gray-200 mb-1 h-10 flex items-center justify-center leading-tight">รถกระบะตู้ทึบ</h4>
+                <div class="text-2xl md:text-3xl font-black text-green-400">10 <span class="text-xs font-normal text-gray-500">คัน</span></div>
+            </div>
+
+            <!-- 9. บริการพิเศษ VIP (รถตู้) -->
+            <div data-aos="zoom-in" data-aos-delay="900" class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 p-4 rounded-2xl w-[46%] sm:w-[30%] md:w-[22%] lg:w-[18%] flex flex-col items-center text-center shadow-lg hover:border-green-500 hover:-translate-y-1 transition-all group">
+                <i class="fa-solid fa-van-shuttle text-3xl md:text-4xl text-gray-400 mb-2 group-hover:text-green-400 transition-colors"></i>
+                <h4 class="text-sm font-bold text-gray-200 mb-1 h-10 flex items-center justify-center leading-tight">บริการพิเศษ VIP</h4>
+                <div class="text-2xl md:text-3xl font-black text-green-400">20 <span class="text-xs font-normal text-gray-500">คัน</span></div>
+            </div>
+        </div>
+        
+        <!-- ป้ายบอกให้เลื่อนลง -->
+        <div data-aos="fade-up" data-aos-delay="1000" class="mt-10 text-center animate-bounce">
+            <a href="#fleet-gallery" class="inline-flex flex-col items-center text-gray-400 hover:text-green-400 transition-colors">
+                <span class="text-sm md:text-base font-medium mb-2">เลื่อนเพื่อชมภาพงานแต่ละประเภท</span>
+                <i class="fa-solid fa-chevron-down text-2xl md:text-3xl"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
