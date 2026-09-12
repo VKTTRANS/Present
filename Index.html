@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vachirawit Logistic Co.,Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div id="hero-placeholder"></div>
+    <div id="about-placeholder"></div>
+    
+    <!-- แยกเป็น 2 หน้าตามที่คุณต้องการ -->
+    <div id="fleet-summary-placeholder"></div>
+    <div id="fleet-gallery-placeholder"></div>
+    
+    <div id="safety-placeholder"></div>
+    <div id="gprs-placeholder"></div>
+    <div id="contact-placeholder"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        function changeFleetTab(tabId) {
+            document.querySelectorAll('.fleet-content').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block', 'fade-in');
+            });
+            const target = document.getElementById('gallery-' + tabId);
+            if (target) {
+                target.classList.remove('hidden');
+                target.classList.add('block', 'fade-in');
+            }
+            document.querySelectorAll('.fleet-btn').forEach(el => {
+                el.classList.remove('bg-green-600', 'text-white', 'border-transparent');
+                el.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
+            });
+            const activeBtn = document.getElementById('btn-' + tabId);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
+                activeBtn.classList.add('bg-green-600', 'text-white', 'border-transparent');
+            }
+        }
+
+        async function loadComponent(elementId, filePath) {
+            try {
+                const response = await fetch(filePath);
+                if (response.ok) {
+                    const text = await response.text();
+                    document.getElementById(elementId).innerHTML = text;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            const components = [
+                { id: "hero-placeholder", file: "_includes/hero.html" },
+                { id: "about-placeholder", file: "_includes/about.html" },
+                { id: "fleet-summary-placeholder", file: "_includes/fleet-summary.html" },
+                { id: "fleet-gallery-placeholder", file: "_includes/fleet-gallery.html" },
+                { id: "safety-placeholder", file: "_includes/safety.html" },
+                { id: "gprs-placeholder", file: "_includes/gprs.html" },
+                { id: "contact-placeholder", file: "_includes/contact.html" }
+            ];
+
+            await Promise.all(components.map(comp => loadComponent(comp.id, comp.file)));
+
+            setTimeout(() => {
+                AOS.init({
+                    duration: 1000, 
+                    easing: 'ease-out-cubic',
+                    once: true,
+                    offset: 50
+                });
+                AOS.refresh();
+            }, 300);
+        });
+    </script>
+</body>
+</html>
