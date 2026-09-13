@@ -31,6 +31,11 @@
             <button onclick="changeFleetTab('flatbed')" id="btn-flatbed" class="fleet-btn flex-shrink-0 flex items-center justify-center px-6 py-3 rounded-full bg-white text-gray-700 font-medium shadow-sm hover:border-green-500 hover:shadow-md transition-all duration-300 border border-gray-200 text-sm md:text-base">
                 <i class="fa-solid fa-industry mr-2"></i> <span class="whitespace-nowrap">งานพื้นเรียบ (เครื่องจักร)</span>
             </button>
+
+            <!-- 🆕 ปุ่มที่เพิ่มใหม่ -->
+            <button onclick="changeFleetTab('special')" id="btn-special" class="fleet-btn flex-shrink-0 flex items-center justify-center px-6 py-3 rounded-full bg-white text-gray-700 font-medium shadow-sm hover:border-green-500 hover:shadow-md transition-all duration-300 border border-gray-200 text-sm md:text-base">
+                <i class="fa-solid fa-truck mr-2"></i> <span class="whitespace-nowrap">งานอื่นๆ</span>
+            </button>
         </div>
         
         <!-- 🖼️ พื้นที่แสดงรูปภาพแบบ 6 รูป (Grid 3x2) -->
@@ -42,6 +47,7 @@
                     <img src="C1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"><i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-3xl transition-opacity"></i></div>
                 </div>
+                <!-- ย่อโค้ดรูป C2 ถึง C6 เพื่อความกระชับ (ให้ใช้โค้ดเดิมของคุณในส่วนนี้) -->
                 <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='C2.jpg';">
                     <img src="C2.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"><i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-3xl transition-opacity"></i></div>
@@ -155,9 +161,38 @@
             </div>
         </div>
 
+        <!-- 🆕 5. หมวดหมู่ที่เพิ่มใหม่ (งานอื่นๆ) -->
+        <div id="gallery-special" class="fleet-content hidden w-full">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 px-2 max-w-5xl mx-auto">
+                <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='S1.jpg';">
+                    <img src="S1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center"><i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-3xl transition-opacity"></i></div>
+                </div>
+                <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='S2.jpg';">
+                    <img src="S2.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center"><i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-3xl transition-opacity"></i></div>
+                </div>
+                <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='S3.jpg';">
+                    <img src="S3.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center"><i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-3xl transition-opacity"></i></div>
+                </div>
+                <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='S4.jpg';">
+                    <img src="S4.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center"><i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-3xl transition-opacity"></i></div>
+                </div>
+                <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='S5.jpg';">
+                    <img src="S5.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center"><i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-3xl transition-opacity"></i></div>
+                </div>
+                <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='S6.jpg';">
+                    <img src="S6.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center"><i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-3xl transition-opacity"></i></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <!-- 🔍 Modal สำหรับคลิกขยายรูป -->
     <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-4 cursor-pointer" onclick="this.classList.add('hidden');">
         <button class="absolute top-6 right-6 text-white text-5xl hover:text-green-500 transition-colors">&times;</button>
         <img id="modalImg" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl cursor-default" onclick="event.stopPropagation();">
