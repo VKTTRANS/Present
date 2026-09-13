@@ -1,8 +1,6 @@
 <style>
     .fade-in { animation: fadeIn 0.5s ease-out forwards; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
-    .hide-scrollbar::-webkit-scrollbar { display: none; }
-    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 </style>
 
 <section id="fleet-gallery" class="min-h-screen flex flex-col justify-center bg-gray-50 py-16 relative">
@@ -13,41 +11,34 @@
             <p class="text-gray-600 text-base md:text-lg">คลิกที่ประเภทงานด้านล่างเพื่อดูรูปภาพ และ <span class="font-bold text-green-600">คลิกที่รูปเพื่อขยาย</span></p>
         </div>
 
-        <!-- 🟢 เมนูปุ่มกด (บังคับแถวเดียว) -->
-        <div data-aos="fade-up" data-aos-delay="100" class="flex flex-nowrap overflow-x-auto justify-start md:justify-center gap-3 max-w-6xl mx-auto w-full mb-12 pb-4 hide-scrollbar">
-            
-            <button onclick="changeFleetTab('import')" id="btn-import" class="fleet-btn flex-shrink-0 flex items-center justify-center px-6 py-3 rounded-full bg-green-600 text-white font-medium shadow-sm hover:shadow-md transition-all duration-300 border border-transparent text-sm md:text-base">
-                <i class="fa-solid fa-ship mr-2"></i> <span class="whitespace-nowrap">งานตู้คอนเทนเนอร์</span>
+        <div data-aos="fade-up" data-aos-delay="100" class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-4xl mx-auto w-full mb-12 px-4">
+            <button onclick="changeFleetTab('import')" id="btn-import" class="fleet-btn flex items-center justify-center px-2 py-3 md:px-6 rounded-xl md:rounded-full bg-green-600 text-white font-medium shadow-sm hover:shadow-md transition-all duration-300 border border-transparent text-xs sm:text-sm md:text-base leading-tight">
+                <i class="fa-solid fa-ship mr-1.5 md:mr-2 text-sm md:text-base"></i> <span>งานตู้คอนเทนเนอร์</span>
             </button>
             
-            <button onclick="changeFleetTab('pallet')" id="btn-pallet" class="fleet-btn flex-shrink-0 flex items-center justify-center px-6 py-3 rounded-full bg-white text-gray-700 font-medium shadow-sm hover:border-green-500 hover:shadow-md transition-all duration-300 border border-gray-200 text-sm md:text-base">
-                <i class="fa-solid fa-pallet mr-2"></i> <span class="whitespace-nowrap">งานเปิดข้าง (พาเลท)</span>
+            <button onclick="changeFleetTab('pallet')" id="btn-pallet" class="fleet-btn flex items-center justify-center px-2 py-3 md:px-6 rounded-xl md:rounded-full bg-white text-gray-700 font-medium shadow-sm hover:border-green-500 hover:shadow-md transition-all duration-300 border border-gray-200 text-xs sm:text-sm md:text-base leading-tight">
+                <i class="fa-solid fa-pallet mr-1.5 md:mr-2 text-sm md:text-base"></i> <span>งานเปิดข้าง (พาเลท)</span>
             </button>
 
-            <button onclick="changeFleetTab('pickup')" id="btn-pickup" class="fleet-btn flex-shrink-0 flex items-center justify-center px-6 py-3 rounded-full bg-white text-gray-700 font-medium shadow-sm hover:border-green-500 hover:shadow-md transition-all duration-300 border border-gray-200 text-sm md:text-base">
-                <i class="fa-solid fa-box mr-2"></i> <span class="whitespace-nowrap">งานกระบะตู้ทึบ</span>
+            <button onclick="changeFleetTab('pickup')" id="btn-pickup" class="fleet-btn flex items-center justify-center px-2 py-3 md:px-6 rounded-xl md:rounded-full bg-white text-gray-700 font-medium shadow-sm hover:border-green-500 hover:shadow-md transition-all duration-300 border border-gray-200 text-xs sm:text-sm md:text-base leading-tight">
+                <i class="fa-solid fa-box mr-1.5 md:mr-2 text-sm md:text-base"></i> <span>งานกระบะตู้ทึบ</span>
             </button>
 
-            <button onclick="changeFleetTab('flatbed')" id="btn-flatbed" class="fleet-btn flex-shrink-0 flex items-center justify-center px-6 py-3 rounded-full bg-white text-gray-700 font-medium shadow-sm hover:border-green-500 hover:shadow-md transition-all duration-300 border border-gray-200 text-sm md:text-base">
-                <i class="fa-solid fa-industry mr-2"></i> <span class="whitespace-nowrap">งานพื้นเรียบ (เครื่องจักร)</span>
+            <button onclick="changeFleetTab('flatbed')" id="btn-flatbed" class="fleet-btn flex items-center justify-center px-2 py-3 md:px-6 rounded-xl md:rounded-full bg-white text-gray-700 font-medium shadow-sm hover:border-green-500 hover:shadow-md transition-all duration-300 border border-gray-200 text-xs sm:text-sm md:text-base leading-tight">
+                <i class="fa-solid fa-industry mr-1.5 md:mr-2 text-sm md:text-base"></i> <span>งานพื้นเรียบ (เครื่องจักร)</span>
             </button>
 
-            <!-- 🆕 ปุ่มที่เพิ่มใหม่ -->
-            <button onclick="changeFleetTab('special')" id="btn-special" class="fleet-btn flex-shrink-0 flex items-center justify-center px-6 py-3 rounded-full bg-white text-gray-700 font-medium shadow-sm hover:border-green-500 hover:shadow-md transition-all duration-300 border border-gray-200 text-sm md:text-base">
-                <i class="fa-solid fa-truck mr-2"></i> <span class="whitespace-nowrap">งานอื่นๆ</span>
+            <button onclick="changeFleetTab('special')" id="btn-special" class="fleet-btn flex items-center justify-center px-2 py-3 md:px-6 rounded-xl md:rounded-full bg-white text-gray-700 font-medium shadow-sm hover:border-green-500 hover:shadow-md transition-all duration-300 border border-gray-200 text-xs sm:text-sm md:text-base leading-tight">
+                <i class="fa-solid fa-truck mr-1.5 md:mr-2 text-sm md:text-base"></i> <span>งานอื่นๆ</span>
             </button>
         </div>
         
-        <!-- 🖼️ พื้นที่แสดงรูปภาพแบบ 6 รูป (Grid 3x2) -->
-        
-        <!-- 1. งานตู้คอนเทนเนอร์ -->
         <div id="gallery-import" class="fleet-content block fade-in w-full" data-aos="fade-up" data-aos-delay="200">
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 px-2 max-w-5xl mx-auto">
                 <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='C1.jpg';">
                     <img src="C1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"><i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-3xl transition-opacity"></i></div>
                 </div>
-                <!-- ย่อโค้ดรูป C2 ถึง C6 เพื่อความกระชับ (ให้ใช้โค้ดเดิมของคุณในส่วนนี้) -->
                 <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='C2.jpg';">
                     <img src="C2.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"><i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-3xl transition-opacity"></i></div>
@@ -71,7 +62,6 @@
             </div>
         </div>
 
-        <!-- 2. งานเปิดข้าง (พาเลท) -->
         <div id="gallery-pallet" class="fleet-content hidden w-full">
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 px-2 max-w-5xl mx-auto">
                 <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='P1.jpg';">
@@ -101,7 +91,6 @@
             </div>
         </div>
 
-        <!-- 3. งานกระบะตู้ทึบ -->
         <div id="gallery-pickup" class="fleet-content hidden w-full">
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 px-2 max-w-5xl mx-auto">
                 <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='A1.jpg';">
@@ -131,7 +120,6 @@
             </div>
         </div>
 
-        <!-- 4. งานพื้นเรียบ (เครื่องจักร) -->
         <div id="gallery-flatbed" class="fleet-content hidden w-full">
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 px-2 max-w-5xl mx-auto">
                 <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='B1.jpg';">
@@ -161,7 +149,6 @@
             </div>
         </div>
 
-        <!-- 🆕 5. หมวดหมู่ที่เพิ่มใหม่ (งานอื่นๆ) -->
         <div id="gallery-special" class="fleet-content hidden w-full">
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 px-2 max-w-5xl mx-auto">
                 <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm group cursor-pointer relative" onclick="document.getElementById('imageModal').classList.remove('hidden'); document.getElementById('modalImg').src='S1.jpg';">
